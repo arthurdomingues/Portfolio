@@ -52,7 +52,7 @@
             Contato
         </a>
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
-            <img src="../assets/github2.png">
+            <img src="../assets/logo/github2.png">
         </a>
     </div>
   </div>

@@ -1,6 +1,7 @@
 <template>
 <div>
   <Header/>
+  <About/>
   <Footer/>
 </div>  
 </template>
@@ -9,12 +10,14 @@
 import axios from 'axios';
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import About from './components/About.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
+    About,
   },
   data(){
     return{
@@ -39,5 +42,6 @@ created: function(){
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: #e4e4e4;
 }
 </style>

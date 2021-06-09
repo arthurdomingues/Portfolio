@@ -4,12 +4,7 @@
     <p>
         Escrito por Arthur Domingues
     </p>
-  </div>
-  <div class="content">
-      <p>
-        Código fonte de Todo Site: <a href="https://github.com/arthurdomingues/Portfolio">Github</a>
-      </p>
-  </div>
+    </div>
 </footer>
 </template>
 
