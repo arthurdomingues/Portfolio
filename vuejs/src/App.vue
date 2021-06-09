@@ -1,13 +1,17 @@
 <template>
-  <h1>{{hello}}</h1>
+<div>
+  <Header/>
+</div>  
 </template>
 
 <script>
 import axios from 'axios';
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
+    Header,
   },
   data(){
     return{
