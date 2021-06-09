@@ -16,11 +16,11 @@
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item is-family-code has-text-weight-medium" href="https://bulma.io/">
+      <a class="navbar-item is-family-code has-text-weight-bold" href="https://bulma.io/">
         Home
       </a>
         <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link is-family-code has-text-weight-medium" href="https://bulma.io/documentation/overview/start/">
+        <a class="navbar-link is-family-code has-text-weight-bold" href="https://bulma.io/documentation/overview/start/">
           Projetos
         </a>
         <div class="navbar-dropdown is-boxed">
@@ -48,7 +48,7 @@
           </a>
         </div>
       </div>
-        <a class="navbar-item is-family-code has-text-weight-medium" href="https://bulma.io/">
+        <a class="navbar-item is-family-code has-text-weight-bold" href="https://bulma.io/">
             Contato
         </a>
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
@@ -60,4 +60,29 @@
 </template>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
 </script>
