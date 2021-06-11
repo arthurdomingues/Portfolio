@@ -1,5 +1,7 @@
 <template>
       <section class="section-light" >
+        <br>
+        <br>
         <div class="card">
         <div class="container">
           <div class="column is-12">

@@ -1,6 +1,7 @@
 <template>
 <div>
   <Header/>
+  <Welcome/>
   <About/>
   <Skills/>
   <Footer/>
@@ -13,6 +14,7 @@ import Header from './components/Header/Header.vue'
 import Footer from './components/Footer/Footer.vue'
 import About from './components/About/About.vue'
 import Skills from './components/Skills/Skills.vue'
+import Welcome from './components/Welcome/Welcome.vue'
 
 export default {
   name: 'App',
@@ -21,6 +23,7 @@ export default {
     Footer,
     About,
     Skills,
+    Welcome,
   },
   data(){
     return{
