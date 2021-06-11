@@ -2,15 +2,17 @@
 <div>
   <Header/>
   <About/>
+  <Skills/>
   <Footer/>
 </div>  
 </template>
 
 <script>
-import axios from 'axios';
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import About from './components/About.vue'
+//import axios from 'axios';
+import Header from './components/Header/Header.vue'
+import Footer from './components/Footer/Footer.vue'
+import About from './components/About/About.vue'
+import Skills from './components/Skills/Skills.vue'
 
 export default {
   name: 'App',
@@ -18,19 +20,13 @@ export default {
     Header,
     Footer,
     About,
+    Skills,
   },
   data(){
     return{
       hello: ''
     }
-  },
-created: function(){
-  axios.get('http://localhost:8181/').then(res => {
-    this.hello = res.data;
-  }).catch(err => {
-    console.log(err)
-  })
-}
+  }
 }
 </script>
 

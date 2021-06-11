@@ -1,5 +1,5 @@
 <template>
-      <div class="section-light" >
+      <section class="section-light" >
         <div class="card">
         <div class="container">
           <div class="column is-12">
@@ -7,7 +7,7 @@
           </div>
           <div class="columns is-multiline">
             <div class="column is-6 right-image " data-aos="fade-left">
-              <img id="eu" src="../assets/images/eu.jpg" alt="" width="300" height="400"/>
+              <img id="eu" src="../../assets/images/eu.jpg" width="300" height="400"/>
             </div>
             <div class="column is-6 has-vertically-aligned-content" data-aos="fade-right">
               <p class="is-larger">
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      </div>
+      </section>
 </template>
 
 <script>
