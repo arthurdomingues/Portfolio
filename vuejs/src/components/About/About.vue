@@ -11,8 +11,8 @@
               <div class="column is-6 right-image">
                 <img id="eu" src="../../assets/images/eu.jpg" width="300" height="400"/>
               </div>
-            <div class="column is-6 has-vertically-aligned-content pl-0">
-              <p class="is-larger is-size-3 has-text-left">
+            <div class="column is-6 has-vertically-aligned-content">
+              <p class="is-larger is-size-4 has-text-left">
                 <strong>
                   Olá, me chamo Arthur Silva Domingues!!
                 </strong>
