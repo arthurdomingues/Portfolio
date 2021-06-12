@@ -17,14 +17,14 @@ const dataCards = [
 	id:3,
 	image: 'js.png',
 	title: 'Javascript',
-	content: 'Programming Language',
+	content: 'Linguagem de Programação',
 	href: 'https://www.javascript.com/'
 },
 {
 	id: 4,
 	image: 'linux.png',
 	title: 'Linux',
-	content: 'Operational System',
+	content: 'Sistema operacional',
 	href: '#'
 },
 {

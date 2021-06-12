@@ -9,11 +9,11 @@
     </div>
     
     <div class="row columns is-multiline is-centered">
-      <div v-for="card in dataCard" :key="card.id" class="column is-3 is-narrow">
+      <div v-for="card in dataCard" :key="card.id" class="column is-one-quarter">
         <div id="animation" class="card large">
           <div class="card-image">
             <a :href="card.href">
-            <img :src="require('@/assets/logo/Skills/'+card.image)" height="200" width="200">
+            <img :src="require('@/assets/logo/Skills/'+card.image)" height="150" width="150">
             </a>
           </div>
           <div class="card-content">
@@ -43,7 +43,7 @@ export default {
 
 <style>
 .card-image{
-  height: 200px;
+  height: 150px;
 }
 a{
   color:inherit;
