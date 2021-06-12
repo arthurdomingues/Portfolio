@@ -8,33 +8,40 @@
             <h1 class="title has-text-centered section-title">Sobre Mim</h1>
           </div>
           <div class="columns is-multiline">
-            <div class="column is-6 right-image " data-aos="fade-left">
-              <img id="eu" src="../../assets/images/eu.jpg" width="300" height="400"/>
-            </div>
-            <div class="column is-6 has-vertically-aligned-content" data-aos="fade-right">
-              <p class="is-larger">
-                &emsp;&emsp;<strong>
-                  Showcase is a modern, beautiful personal website template to
-                  showcase who you are, as well as projects you've worked on in
-                  the past.</strong>
+              <div class="column is-6 right-image">
+                <img id="eu" src="../../assets/images/eu.jpg" width="300" height="400"/>
+              </div>
+            <div class="column is-6 has-vertically-aligned-content pl-0">
+              <p class="is-larger is-size-3 has-text-left">
+                <strong>
+                  Olá, me chamo Arthur Silva Domingues!!
+                </strong>
               </p>
               <br/>
-              <p>
-                Showcase was built from the ground up with Bulma to be fast and
-                responsive out of the box with all source files well documented
-                for easy to customization. The Showcase template gives you a
-                personal space to share what you are all about as a creative
-                designer, developer, photographer, and more!
+              <p class="has-text-left">
+                Nasci em Agosto de 1997 e sou natural de São Bernardo do Campo/SP.<br>
+                Meu primeiro contato com a programação foi com a linguagem C, onde tive
+                uma breve introdução. Atualmente estou tentando entrar no mercado de
+                trabalho onde espero trabalhar com javascript, que pode ser usado a nível
+                back-end e front-end, o que é uma mão na roda para desenvolvedores.<br>
+                Sou um grande entusiasta e apreciador de tecnologias software livre,
+                como Linux, Projeto GNOME, Projeto KDE, Vim, etc. Fora do universo da
+                tecnologia, sou um grande apreciador de música, sem restrições de estilo,
+                e até fui músico por alguns anos, mas no momento me concentro na programação.
+                Seja Bem Vindo(a) ao meu site, aqui você poderá ter uma amostra de alguns
+                projetos simples. Todo o código fonte deste site você encontra no meu GitHub.
               </p>
               <br/>
               <div class="is-divider"></div>
               <div class="columns about-links">
                 <div class="column">
                   <p class="heading">
-                    <strong>Contato</strong>
+                    <strong>Celular</strong>
                   </p>
                   <p class="subheading">
-                    (11)95814-0689
+                    (11)95814-0689<br>
+                    <img src="../../assets/logo/About/telegram.png">
+                    <img src="../../assets/logo/About/whatsapp.png">
                   </p>
                 </div>
                 <div class="column">
