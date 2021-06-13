@@ -38,6 +38,17 @@
       </a>
       <br>
       <br>
+
+      <h1 class="has-text-weight-bold is-size-3">
+        Celular:
+      </h1>
+      <a class="is-size-4" href="https://twitter.com/ASilvaDomingues">
+        <fa :icon="['fab', 'whatsapp']"></fa>
+        <fa :icon="['fab', 'telegram']"></fa>
+        (11)95814-0689
+      </a>
+      <br>
+      <br>
     </div>
 
     <div class="column is-6 has-text-left">
