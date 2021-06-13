@@ -53,9 +53,10 @@
           </a>
         </div>
       </div>
-        <a class="navbar-item is-family-code has-text-weight-bold" href="">
-            Contato
-        </a>
+
+        <router-link class="navbar-item is-family-code has-text-weight-bold" 
+        to="/contact">Contato</router-link>
+
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
           <fa class="fa-2x" :icon="['fab', 'github']"></fa>
         </a>

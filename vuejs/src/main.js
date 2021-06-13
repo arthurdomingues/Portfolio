@@ -3,7 +3,10 @@ import App from './App.vue'
 import "../node_modules/bulma/css/bulma.css"
 import "../node_modules/bulma-social/css/all.min.css"
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { 
+  fas,
+  faEnvelope,
+  faUser } from '@fortawesome/free-solid-svg-icons'
 import { 
   faTwitter,
   faGithub,
@@ -18,7 +21,9 @@ library.add(
   faTwitter,
   faGithub,
   faTelegram,
-  faWhatsapp)
+  faWhatsapp,
+  faEnvelope,
+  faUser)
 
 const app = createApp(App)
 app.use(router)
