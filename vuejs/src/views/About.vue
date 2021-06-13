@@ -5,6 +5,7 @@
           <div class="column is-12">
             <h1 class="title has-text-centered section-title">Sobre Mim</h1>
           </div>
+          <br>
           <div class="columns is-multiline">
               <div class="column is-6 right-image">
                 <img id="eu" src="../assets/images/eu.jpg" width="300" height="400"/>
@@ -16,7 +17,7 @@
                 </strong>
               </p>
               <br/>
-              <p class="has-text-left">
+              <p class="has-text-left texto">
                 Nasci em Agosto de 1997 e sou natural de São Bernardo do Campo/SP.<br>
                 Meu primeiro contato com a programação foi com a linguagem C, onde tive
                 uma breve introdução. Atualmente estou tentando entrar no mercado de
@@ -30,27 +31,9 @@
                 projetos simples. Todo o código fonte deste site você encontra no meu GitHub.
               </p>
               <br/>
-              <div class="is-divider"></div>
-              <div class="columns about-links">
-                <div class="column">
-                  <p class="heading">
-                    <strong>Celular</strong>
-                  </p>
-                  <p class="subheading">
-                    (11)95814-0689<br>
-                    <fa class="fa-2x" :icon="['fab', 'whatsapp']"></fa>
-                    <fa class="fa-2x" :icon="['fab', 'telegram']"></fa>
-                  </p>
-                </div>
-                <div class="column">
-                  <p class="heading">
-                    <strong>Email</strong>
-                  </p>
-                  <p class="subheading">
-                      arthurdomingues76@gmail.com
-                  </p>
-                </div>
-              </div>
+
+
+
             </div>
           </div>
         </div>
@@ -66,5 +49,8 @@ export default {
 <style scoped>
 #eu{
     border-radius: 5px;
+}
+.texto{
+  font-size: 17px;
 }
 </style>
