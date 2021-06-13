@@ -45,7 +45,6 @@
           <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
             Form
           </a>
-          <hr class="navbar-divider">
           <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
             Elements
           </a>
@@ -93,8 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <style scoped>
-a{
-  color: inherit;
-  text-decoration: inherit;
-}
 </style>

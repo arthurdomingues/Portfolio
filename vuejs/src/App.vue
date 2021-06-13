@@ -6,8 +6,8 @@
         <component :is="Component"></component>
       </transition>
     </router-view>
-    <Footer/>
   </div>
+  <Footer/>
 </template>
 
 <script>

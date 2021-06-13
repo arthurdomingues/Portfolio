@@ -45,6 +45,9 @@ export default {
 .card-image{
   height: 150px;
 }
+.card{
+  border-radius: 10px;
+}
 a{
   color:inherit;
   text-decoration: inherit;
