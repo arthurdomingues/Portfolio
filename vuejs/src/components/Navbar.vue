@@ -15,47 +15,16 @@
     <div class="navbar-start">
     </div>
 
-    <div class="navbar-end">
-        <router-link class="navbar-item is-family-code has-text-weight-bold" 
-        to="/">Home</router-link>
+    <div class="navbar-end is-family-code has-text-weight-bold">
+        <router-link class="navbar-item" to="/">Home</router-link>
 
-        <router-link class="navbar-item is-family-code has-text-weight-bold" 
-        to="/about">Sobre Mim</router-link>
+        <router-link class="navbar-item" to="/about">Sobre Mim</router-link>
 
-        <router-link class="navbar-item is-family-code has-text-weight-bold" 
-        to="/skills">Skills</router-link>
+        <router-link class="navbar-item" to="/skills">Skills</router-link>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link is-family-code has-text-weight-bold" href="https://bulma.io/documentation/overview/start/">
-          Projetos
-        </a>
-        <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-            Overview
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-            Modifiers
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-            Columns
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-            Layout
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-            Form
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-            Elements
-          </a>
-          <a class="navbar-item" href="https://bulma.io/documentation/components/breadcrumb/">
-            Components
-          </a>
-        </div>
-      </div>
+        <a class="navbar-item" href=""> Projetos </a>
 
-        <router-link class="navbar-item is-family-code has-text-weight-bold" 
-        to="/contact">Contato</router-link>
+        <router-link class="navbar-item" to="/contact">Contato</router-link>
 
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
           <fa class="fa-2x" :icon="['fab', 'github']"></fa>
