@@ -4,12 +4,21 @@ import "../node_modules/bulma/css/bulma.css"
 import "../node_modules/bulma-social/css/all.min.css"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { 
+  faTwitter,
+  faGithub,
+  faTelegram,
+  faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import router from './router'
 
 
-library.add(fas, faTwitter, faGithub)
+library.add(
+  fas,
+  faTwitter,
+  faGithub,
+  faTelegram,
+  faWhatsapp)
 
 const app = createApp(App)
 app.use(router)

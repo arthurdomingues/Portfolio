@@ -38,8 +38,8 @@
                   </p>
                   <p class="subheading">
                     (11)95814-0689<br>
-                    <img src="../assets/logo/About/telegram.png">
-                    <img src="../assets/logo/About/whatsapp.png">
+                    <fa class="fa-2x" :icon="['fab', 'whatsapp']"></fa>
+                    <fa class="fa-2x" :icon="['fab', 'telegram']"></fa>
                   </p>
                 </div>
                 <div class="column">
