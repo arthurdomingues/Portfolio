@@ -57,7 +57,10 @@
             Contato
         </a>
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
-            <img src="../assets/logo/github2.png">
+          <fa class="fa-2x" :icon="['fab', 'github']"></fa>
+        </a>
+        <a class="navbar-item" href="https://twitter.com/ASilvaDomingues">
+          <fa class="fa-2x" :icon="['fab', 'twitter']"></fa>
         </a>
     </div>
   </div>
