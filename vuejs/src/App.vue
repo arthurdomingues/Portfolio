@@ -1,30 +1,48 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Navbar/>
+    <router-view v-slot="{ Component }">
+      <transition name="slide">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
+    <Footer/>
   </div>
-  <router-view/>
 </template>
 
+<script>
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+
+export default{
+  components: {
+    Navbar,
+    Footer,
+  }
+}
+</script>
+
 <style>
-#app {
+body{
+  margin: 0;
+  padding: 0;
+  background: #f3f3f3;
+}
+#app{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 0px;
+.slide-enter-active,
+.slide-leave-active{
+  transition: opacity .3s, transform .3s;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.slide-enter,
+.slide-leave-to{
+  opacity: 0;
+  transform: translateZ(-30%);
 }
 </style>

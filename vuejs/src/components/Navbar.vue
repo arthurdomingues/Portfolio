@@ -16,9 +16,15 @@
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item is-family-code has-text-weight-bold" href="https://bulma.io/">
-        Home
-      </a>
+        <router-link class="navbar-item is-family-code has-text-weight-bold" 
+        to="/">Home</router-link>
+
+        <router-link class="navbar-item is-family-code has-text-weight-bold" 
+        to="/about">Sobre Mim</router-link>
+
+        <router-link class="navbar-item is-family-code has-text-weight-bold" 
+        to="/skills">Skills</router-link>
+
         <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link is-family-code has-text-weight-bold" href="https://bulma.io/documentation/overview/start/">
           Projetos
@@ -48,11 +54,11 @@
           </a>
         </div>
       </div>
-        <a class="navbar-item is-family-code has-text-weight-bold" href="https://bulma.io/">
+        <a class="navbar-item is-family-code has-text-weight-bold" href="">
             Contato
         </a>
         <a class="navbar-item" href="https://github.com/arthurdomingues/">
-            <img src="../../assets/logo/github2.png">
+            <img src="../assets/logo/github2.png">
         </a>
     </div>
   </div>
@@ -86,3 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 </script>
+<style scoped>
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+</style>
