@@ -11,5 +11,5 @@ app.use(express.json())
 app.use('/', router)
 
 app.listen(8181, () => {
-  console.log('Server Running')
+  console.log('Server Running on http://localhost:8181')
 })
