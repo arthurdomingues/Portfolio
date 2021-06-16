@@ -3,7 +3,6 @@ const request = require('supertest')
 const ContactModel = require('../models/Contact')
 const knex = require('../database/connection')
 const assert = require('assert')
-const http = require('http')
 
 describe('Tests Contact Model', async () => {
   before(async () => {

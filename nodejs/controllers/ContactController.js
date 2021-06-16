@@ -28,21 +28,19 @@ class ContactController {
     if (name === undefined || name === '' || name === ' ') {
       res.status(400)
       res.json({ err: 'Nome inválido' })
-    }
-
-    if (email === undefined || email === '' || email === ' ') {
+    } else if (email === undefined || email === '' || email === ' ') {
       res.status(400)
       res.json({ err: 'Email inválido' })
-    }
-
-    if (message === undefined || message === '' || message === ' ') {
+    } else if (message === undefined || message === '' || message === ' ') {
       res.status(400)
       res.json({ err: 'Mensagem inválida' })
+    } else {
+      await Contact.sendMessage(name, email, message, sent)
+      res.status(200)
+      res.json({
+        message: 'Sua foi Mensagem Enviada com Sucesso!! Obrigado pelo contato'
+      })
     }
-
-    await Contact.sendMessage(name, email, message, sent)
-    res.status(200)
-    res.send('Mensagem Enviada com Sucesso')
   }
 
   async delete (req, res) {
