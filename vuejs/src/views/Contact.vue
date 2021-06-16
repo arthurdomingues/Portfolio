@@ -55,7 +55,10 @@
       <br>
       <div class="field">
         <div class="control has-icons-left">
-          <input class="input" type="text" placeholder="Seu Nome">
+          <input class="input"
+          type="text"
+          placeholder="Seu Nome"
+          v-model="name">
           <span class="icon is-left">
             <fa :icon="['fas', 'user']"></fa>
           </span>
@@ -64,7 +67,10 @@
 
       <div class="field">
         <div class="control has-icons-left">
-          <input class="input" type="email" placeholder="Seu Email">
+          <input class="input"
+          type="email"
+          placeholder="Seu Email"
+          v-model="email">
           <span class="icon is-left">
             <fa :icon="['fas', 'envelope']"></fa>
           </span>
@@ -73,11 +79,18 @@
 
       <div class="field">
         <div class="control">
-          <textarea class="textarea" placeholder="Sua Mensagem"></textarea>
+          <textarea class="input textarea"
+            placeholder="Sua Mensagem"
+            v-model="message"></textarea>
         </div>
       </div>
 
-      <button class="button is-dark is-outlined is-medium">Enviar</button>
+      <button class="button is-dark is-outlined is-medium" @click="send">
+        Enviar
+      </button>
+
+        <Notification ref="success" class="is-primary" :message="notification"/>
+        <Notification ref="danger" class="is-danger" :message="notification"/>
     </div>
 
   </div>
@@ -87,15 +100,48 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios'
+import Notification from '../components/Notification.vue'
 
+export default {
+  components:{
+    Notification
+  },
+  data(){
+    return {
+      name: '',
+      email: '',
+      message: '',
+      notification: undefined,
+    }
+  },
+  methods:{
+    send(){
+      axios.post('http://localhost:8181/contact',{
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }).then( res =>{
+        this.notification = res.data.message
+        this.$refs.success.show()
+        this.$router.push('Contact')
+      }).catch(err => {
+        this.notification = err.response.data.err
+        this.$refs.danger.show()
+        this.$router.push('Contact')
+      })
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    },
+  }
 }
 </script>
 
 <style scoped>
 ::placeholder{
   color:gray;
-  opacity: 1; 
+  opacity: 1;
 }
 
 </style>
