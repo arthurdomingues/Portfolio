@@ -20,9 +20,9 @@ describe('Tests Contact Model', async () => {
 
   it('created message', async () => {
     const user = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
-    assert.equal(user.rows[0].name, 'TestName')
-    assert.equal(user.rows[0].email, 'test@email.com')
-    assert.equal(user.rows[0].message, 'testMessage')
+    assert.strictEqual(user.rows[0].name, 'TestName')
+    assert.strictEqual(user.rows[0].email, 'test@email.com')
+    assert.strictEqual(user.rows[0].message, 'testMessage')
   })
 })
 
