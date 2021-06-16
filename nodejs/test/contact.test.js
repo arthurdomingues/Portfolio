@@ -18,7 +18,7 @@ describe('Tests Contact Model', async () => {
     await knex.raw("DELETE FROM contact WHERE name='TestName'")
   })
 
-  it('created client', async () => {
+  it('created message', async () => {
     const user = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
     assert.equal(user.rows[0].name, 'TestName')
     assert.equal(user.rows[0].email, 'test@email.com')
@@ -57,5 +57,20 @@ describe('Tests Contact Controler', () => {
       .post('/contact')
       .send({})
       .expect(400)
+  })
+
+  it('GET /contact/:id it should return 200 and json', async () => {
+    const id = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
+    await request(app)
+      .get('/contact/' + id.rows[0].id)
+      .expect('Content-Type', /json/)
+      .expect(200)
+  })
+
+  it('DELETE /contact/:id it should return 200', async () => {
+    const id = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
+    await request(app)
+      .delete('/contact/' + id.rows[0].id)
+      .expect(200)
   })
 })
