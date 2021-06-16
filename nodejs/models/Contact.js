@@ -1,6 +1,20 @@
 const knex = require('../database/connection')
 
 class Contact {
+  async getMessage (id) {
+    try {
+      const query = knex.select().where({ id: id }).table('contact')
+      if (query !== undefined) {
+        return query
+      } else {
+        return undefined
+      }
+    } catch (err) {
+      console.log(err)
+      return []
+    }
+  }
+
   async getAllMessages () {
     try {
       const query = await knex.select([

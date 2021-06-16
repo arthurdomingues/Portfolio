@@ -7,6 +7,19 @@ class ContactController {
     res.json(messages)
   }
 
+  async getOne (req, res) {
+    const id = req.params.id
+    const message = await Contact.getMessage(id)
+
+    if (message.length === 0) {
+      res.status(404)
+      res.send('Não Foi Possível')
+    } else {
+      res.status(200)
+      res.json(message)
+    }
+  }
+
   async send (req, res) {
     const name = req.body.name
     const email = req.body.email

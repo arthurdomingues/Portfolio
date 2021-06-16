@@ -13,3 +13,5 @@ app.use('/', router)
 app.listen(8181, () => {
   console.log('Server Running on http://localhost:8181')
 })
+
+module.exports = app
