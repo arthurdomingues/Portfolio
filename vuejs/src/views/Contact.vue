@@ -42,11 +42,11 @@
       <h1 class="has-text-weight-bold is-size-3">
         Celular:
       </h1>
-      <a class="is-size-4" href="https://twitter.com/ASilvaDomingues">
+      <h1 class="is-size-4">
         <fa :icon="['fab', 'whatsapp']"></fa>
         <fa :icon="['fab', 'telegram']"></fa>
         (11)95814-0689
-      </a>
+      </h1>
       <br>
       <br>
     </div>
