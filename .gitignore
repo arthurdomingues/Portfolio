@@ -121,3 +121,4 @@ env.json
 
 nodejs/node_modules/
 vuejs/node_modules/
+nodejs/.env
