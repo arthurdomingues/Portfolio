@@ -3,6 +3,8 @@ const request = require('supertest')
 const ContactModel = require('../models/Contact')
 const knex = require('../database/connection')
 const assert = require('assert')
+require('dotenv').config()
+const jwt = require('jsonwebtoken')
 
 describe('Tests Contact Model', async () => {
   before(async () => {
@@ -32,6 +34,7 @@ describe('Tests Contact Controler', () => {
     message: 'testMessage',
     sent: `${new Date()}`
   }
+  const token = jwt.sign({ name: process.env.ADMIN_NAME }, process.env.SECRET)
 
   after(async () => {
     await knex.raw("DELETE FROM contact WHERE name='TestName'")
@@ -40,6 +43,7 @@ describe('Tests Contact Controler', () => {
   it('GET /contact it should return 200 and json', async () => {
     await request(app)
       .get('/contact')
+      .auth(token, { type: 'bearer' })
       .expect('Content-Type', /json/)
       .expect(200)
   })
@@ -62,6 +66,7 @@ describe('Tests Contact Controler', () => {
     const id = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
     await request(app)
       .get('/contact/' + id.rows[0].id)
+      .auth(token, { type: 'bearer' })
       .expect('Content-Type', /json/)
       .expect(200)
   })
@@ -70,6 +75,7 @@ describe('Tests Contact Controler', () => {
     const id = await knex.raw("SELECT * FROM contact WHERE name='TestName'")
     await request(app)
       .delete('/contact/' + id.rows[0].id)
+      .auth(token, { type: 'bearer' })
       .expect(200)
   })
 })
