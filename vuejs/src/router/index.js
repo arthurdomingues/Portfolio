@@ -3,8 +3,13 @@ import About from '../views/About.vue'
 import Home from '../views/Home.vue'
 import Skills from '../views/Skills.vue'
 import Contact from '../views/Contact.vue'
+import Messages from '../views/Messages.vue'
+import Login from '../views/Login.vue'
+import Auth from './auth'
+import NotFound from '../views/404.vue'
 
 const routes = [
+  { path: '/:pathMatch(.*)*', component: NotFound },
   {
     path: '/',
     name: 'Home',
@@ -24,6 +29,17 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/admin/messages',
+    name: 'Messages',
+    component: Messages,
+    beforeEnter: Auth
   }
 ]
 
