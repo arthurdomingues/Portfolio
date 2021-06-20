@@ -32,36 +32,80 @@
         <a class="navbar-item" href="https://twitter.com/ASilvaDomingues">
           <fa class="fa-2x" :icon="['fab', 'twitter']"></fa>
         </a>
+
+        <router-link v-if="auth"
+          class="navbar-item"
+          to="/admin/messages">
+          <fa class="fa-2x" :icon="['fas', 'envelope']"></fa>
+        </router-link>
+
+        <router-link v-if="auth" class="navbar-item" @click="logout" to="/">
+          <fa class="fa-2x" :icon="['fas', 'sign-out-alt']"></fa>
+        </router-link>
+
     </div>
   </div>
+  <Notification ref="success" class="is-primary" :message="message"/>
+  <Notification ref="danger" class="is-warning" :message="message"/>
 </nav>
+
 </template>
 
 <script>
+import axios from 'axios'
+import Notification from '../components/Notification.vue'
+
+export default{
+  components:{
+    Notification
+  },
+  created: function(){
+    if(localStorage.getItem('token')){
+      this.auth = true
+    } else {
+      this.auth = false
+    }
+  },
+  data(){
+    return{
+      auth: false,
+      message: undefined
+    }
+  },
+  methods:{
+    logout(){
+      axios.get('http://localhost:8181/logout')
+        .then(res => {
+          this.message = res.data.message
+          this.$refs.success.show()
+          localStorage.removeItem('token')
+          setTimeout(()=>{
+            this.$router.go()
+          }, 3500)
+        }).catch(err=>{
+          console.log(err)
+          this.$refs.danger.show()
+        })
+    }
+  }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
+  const $navbarBurgers = Array
+    .prototype
+    .slice
+    .call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
     $navbarBurgers.forEach( el => {
       el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
         const target = el.dataset.target;
         const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-
       });
     });
   }
-
 });
 </script>
 <style scoped>
