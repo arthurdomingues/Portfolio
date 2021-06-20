@@ -11,5 +11,7 @@ router.get('/contact/:id', Admin, ContactController.getOne)
 router.post('/contact', ContactController.send)
 router.delete('/contact/:id', Admin, ContactController.delete)
 router.post('/login', AdminController.login)
+router.post('/validate', Admin, AdminController.validate)
+router.get('/logout', AdminController.logout)
 
 module.exports = router

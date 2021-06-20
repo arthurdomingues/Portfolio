@@ -48,10 +48,10 @@ class ContactController {
     const result = await Contact.deleteMessage(id)
     if (result.status) {
       res.status(200)
-      res.send('Deletado com Sucesso')
+      res.json({ message: 'Deletado com sucesso' })
     } else {
       res.status(400)
-      res.send('Ocorreu um erro')
+      res.json({ err: 'Ocorreu algum erro' })
     }
   }
 }
