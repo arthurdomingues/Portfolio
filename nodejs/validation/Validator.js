@@ -12,7 +12,7 @@ const validate = validations => {
       return next()
     }
 
-    res.status(400).json({ errors: err.array() })
+    res.status(400).json({ err: err.array() })
   }
 }
 

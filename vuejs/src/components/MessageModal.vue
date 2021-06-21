@@ -64,7 +64,7 @@ export default {
           this.$refs.success.show()
           this.$emit('refresh')
         }).catch(err => {
-          this.notification = err.response.data.err
+          this.notification = err.response.data.err[0].msg
           this.$refs.error.show()
         })
     }

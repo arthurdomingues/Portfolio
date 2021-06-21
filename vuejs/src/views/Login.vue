@@ -83,7 +83,7 @@ export default{
         }, 3500)
       }).catch(err => {
         console.log(err)
-        this.notification = err.response.data.err
+        this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
       })
     }

@@ -72,7 +72,7 @@ export default{
       .then(res => {
         this.messages = res.data
       }) .catch(err => {
-        this.notification = err.response.data.err
+        this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
       })
   },

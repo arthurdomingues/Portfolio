@@ -2,11 +2,11 @@ const { body, param } = require('express-validator')
 
 const sendValidator = [
   body('name', 'Campo nome está vazio').notEmpty(),
-  body('name', 'Campo Deve conter no mínimo 3 caracteres')
+  body('name', 'Campo Nome Deve conter no mínimo 3 caracteres')
     .isString().isLength({ min: 3 }),
 
-  body('email', 'Email está vazio').notEmpty(),
-  body('email', 'Email está incorreto').isEmail(),
+  body('email', 'Campo Email está vazio').notEmpty(),
+  body('email', 'Campo Email está incorreto').isEmail(),
 
   body('message', 'Mensagem deve conter no mínimo 25 caracteres')
     .isString().isLength({ min: 25 })

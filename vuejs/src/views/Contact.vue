@@ -126,7 +126,7 @@ export default {
         this.$refs.success.show()
         this.$router.push('Contact')
       }).catch(err => {
-        this.notification = err.response.data.err
+        this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
         this.$router.push('Contact')
       })
