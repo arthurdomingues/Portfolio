@@ -17,26 +17,19 @@ class AdminController {
   async login (req, res) {
     const { name, password } = req.body
     const user = await AdminModel.find(name)
-
-    if (name === undefined || name === '' || name === ' ') {
-      res.status(406)
-      res.json({ err: 'Insira corretamento' })
-    } else if (password === undefined || password === '' || password === ' ') {
-      res.status(406)
-      res.json({ err: 'Insira corretamento' })
-    } else if (user !== undefined) {
+    if (user !== undefined) {
       const result = await bcrypt.compare(password, user[0].password)
       if (result) {
         const token = jwt.sign({ name: user[0].name }, secret)
-        res.status(200)
-        res.json({ token: token, message: 'Login efetuado com sucesso' })
+        res.status(200).json({
+          token: token,
+          message: 'Login efetuado com sucesso'
+        })
       } else {
-        res.status(406)
-        res.json({ err: 'Senha incorreta' })
+        res.status(406).json({ err: 'Senha incorreta' })
       }
     } else {
-      res.status(406)
-      res.json({ status: false, err: 'Usuário incorreto' })
+      res.status(406).json({ status: false, err: 'Usuário incorreto' })
     }
   }
 

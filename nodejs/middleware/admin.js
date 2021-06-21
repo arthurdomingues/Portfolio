@@ -18,7 +18,7 @@ module.exports = function (req, res, next) {
       res.json({ err: 'Ocorreu um erro na autenticação' })
     }
   } else {
-    res.status(403)
+    res.status(401)
     res.json({ err: 'Você não está autenticado' })
   }
 }

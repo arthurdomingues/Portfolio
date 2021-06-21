@@ -3,8 +3,7 @@ const Contact = require('../models/Contact')
 class ContactController {
   async index (req, res) {
     const messages = await Contact.getAllMessages()
-    res.status(200)
-    res.json(messages)
+    res.status(200).json(messages)
   }
 
   async getOne (req, res) {
@@ -15,8 +14,7 @@ class ContactController {
       res.status(404)
       res.send('Não Foi Possível')
     } else {
-      res.status(200)
-      res.json(message)
+      res.status(200).json(message)
     }
   }
 
@@ -25,21 +23,14 @@ class ContactController {
     const email = req.body.email
     const message = req.body.message
     const sent = new Date()
-    if (name === undefined || name === '' || name === ' ') {
-      res.status(400)
-      res.json({ err: 'Nome inválido' })
-    } else if (email === undefined || email === '' || email === ' ') {
-      res.status(400)
-      res.json({ err: 'Email inválido' })
-    } else if (message === undefined || message === '' || message === ' ') {
-      res.status(400)
-      res.json({ err: 'Mensagem inválida' })
-    } else {
+    try {
       await Contact.sendMessage(name, email, message, sent)
-      res.status(200)
-      res.json({
-        message: 'Sua foi Mensagem Enviada com Sucesso!! Obrigado pelo contato'
+      res.status(200).json({
+        message: `Sua foi Mensagem Enviada com Sucesso!!
+          Obrigado pelo contato`
       })
+    } catch (err) {
+      res.status(400).json({ err: err })
     }
   }
 
@@ -47,11 +38,9 @@ class ContactController {
     const id = req.params.id
     const result = await Contact.deleteMessage(id)
     if (result.status) {
-      res.status(200)
-      res.json({ message: 'Deletado com sucesso' })
+      res.status(200).json({ message: 'Deletado com sucesso' })
     } else {
-      res.status(400)
-      res.json({ err: 'Ocorreu algum erro' })
+      res.status(400).json({ err: 'Ocorreu algum erro' })
     }
   }
 }
