@@ -11,6 +11,7 @@ module.exports = function (req, res, next) {
     const token = bearer[1]
     try {
       jwt.verify(token, secret)
+      res.status(200)
       next()
     } catch (err) {
       res.status(403)
