@@ -7,9 +7,9 @@ const AdminController = require('../controllers/AdminController')
 const {
   idValidator,
   sendValidator
-} = require('../validation/ContactValidator')
-const validate = require('../validation/Validator')
-const loginValidator = require('../validation/AdminValidator')
+} = require('../middleware/validation/ContactValidator')
+const validate = require('../middleware/validation/Validator')
+const loginValidator = require('../middleware/validation/AdminValidator')
 
 router.get('/', HomeController.index)
 router.get('/contact', Admin, ContactController.index)
