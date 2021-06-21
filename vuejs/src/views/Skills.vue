@@ -5,14 +5,14 @@
      <div class="column has-text-centered">
        <br>
        <h1 class="title">Skills</h1>
-     </div> 
+     </div>
     </div>
-    
+
     <div class="row columns is-multiline is-centered">
       <div v-for="card in dataCard" :key="card.id" class="column is-one-quarter">
         <div id="animation" class="card large">
           <div class="card-image">
-            <a :href="card.href">
+            <a id="nocolor" :href="card.href">
             <img :src="require('@/assets/logo/Skills/'+card.image)" height="150" width="150">
             </a>
           </div>
@@ -24,9 +24,13 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
+  <hr>
+      <h1>
+        Créditos pelos ícones:
+        <a href="https://icon-icons.com/">https://icon-icons.com/</a>
+      </h1>
 </section>
 </template>
 
@@ -40,14 +44,14 @@ export default {
           image: 'node.png',
           title: 'NodeJS',
           content: 'Runtime Javascript',
-          href: 'https://nodejs.org/pt-br/'
+          href: 'https://www.nodejs.org/pt-br/'
         },
         {
           id:2,
           image: 'vue.png',
           title: 'VueJS',
           content: 'FrontEnd',
-          href: 'https://vuejs.org/'
+          href: 'https://www.vuejs.org/'
         },
         {
           id:3,
@@ -61,28 +65,36 @@ export default {
           image: 'linux.png',
           title: 'Linux',
           content: 'Sistema operacional',
-          href: '#'
+          href: 'https://www.kernel.org/'
         },
         {
           id: 5,
           image: 'git.png',
           title: 'Git',
           content: 'Controle de Versionamento',
-          href: 'https://git-scm.com/'
-        }] 
+          href: 'https://www.git-scm.com/'
+        },
+        {
+          id: 6,
+          image: 'postgresql.png',
+          title: 'PostgreSQL',
+          content: 'Database',
+          href: 'https://www.postgresql.org'
+        }
+      ]
     }// end return
   }//end data
 }
 </script>
 
-<style>
+<style scoped>
 .card-image{
   height: 150px;
 }
 .card{
   border-radius: 10px;
 }
-a{
+#nocolor{
   color:inherit;
   text-decoration: inherit;
 }

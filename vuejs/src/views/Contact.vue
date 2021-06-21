@@ -143,5 +143,11 @@ export default {
   color:gray;
   opacity: 1;
 }
-
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover{
+  color: black;
+}
 </style>
