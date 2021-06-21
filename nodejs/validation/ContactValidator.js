@@ -17,4 +17,7 @@ const idValidator = [
   param('id', 'ID Deve ser inteiro').isInt()
 ]
 
-module.exports = { sendValidator, idValidator }
+module.exports = {
+  sendValidator,
+  idValidator
+}
