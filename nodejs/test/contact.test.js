@@ -31,7 +31,7 @@ describe('Tests Contact Controler', () => {
   const message = {
     name: 'TestName',
     email: 'test@email.com',
-    message: 'testMessage',
+    message: 'TestMessageTestMessageTestMessage',
     sent: `${new Date()}`
   }
   const token = jwt.sign({ name: process.env.ADMIN_NAME }, process.env.SECRET)
