@@ -17,7 +17,12 @@ const idValidator = [
   param('id', 'ID Deve ser inteiro').isInt()
 ]
 
+const archivedValidator = [
+  param('archived').isIn(['archived', ''])
+]
+
 module.exports = {
   sendValidator,
-  idValidator
+  idValidator,
+  archivedValidator
 }

@@ -2,7 +2,11 @@ const Contact = require('../models/Contact')
 
 class ContactController {
   async index (req, res) {
-    const messages = await Contact.getAllMessages()
+    let archived = false
+    if (req.params.archived) {
+      archived = true
+    }
+    const messages = await Contact.getAllMessages(archived)
     res.status(200).json(messages)
   }
 
@@ -39,6 +43,17 @@ class ContactController {
     const result = await Contact.deleteMessage(id)
     if (result.status) {
       res.status(200).json({ message: 'Deletado com sucesso' })
+    } else {
+      res.status(400).json({ err: 'Ocorreu algum erro' })
+    }
+  }
+
+  async edit (req, res) {
+    const id = req.params.id
+    const archived = req.body.archived
+    const result = await Contact.editMessage(id, archived)
+    if (result.status) {
+      res.status(200).json({ message: 'Mensagem Arquivada com sucesso' })
     } else {
       res.status(400).json({ err: 'Ocorreu algum erro' })
     }

@@ -15,14 +15,16 @@ class Contact {
     }
   }
 
-  async getAllMessages () {
+  async getAllMessages (isArchived) {
+    const archived = isArchived
     try {
       const query = await knex.select([
         'id',
         'name',
         'email',
         'message',
-        'sent']).table('contact')
+        'sent',
+        'archived']).where({ archived: archived }).table('contact')
       return query
     } catch (err) {
       console.log(err)
@@ -45,6 +47,17 @@ class Contact {
     } catch (err) {
       console.log(err)
       return ({ status: 'false', err: 'Não foi Possível deletar mensagem' })
+    }
+  }
+
+  async editMessage (id, archived) {
+    try {
+      await knex.update({ archived: archived })
+        .where({ id: id })
+        .table('contact')
+      return ({ status: 'true' })
+    } catch (err) {
+      return ({ status: 'false' })
     }
   }
 }
