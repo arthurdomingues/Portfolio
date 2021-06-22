@@ -33,11 +33,21 @@
           <fa class="fa-2x" :icon="['fab', 'twitter']"></fa>
         </a>
 
-        <router-link v-if="auth"
-          class="navbar-item"
-          to="/admin/messages">
-          <fa class="fa-2x" :icon="['fas', 'envelope']"></fa>
-        </router-link>
+        <div v-if="auth" class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <fa class="fa-2x" :icon="['fas', 'envelope']"></fa>
+          </a>
+          <div class="navbar-dropdown is-right">
+            <router-link
+              class="navbar-item"
+              :to="{name: 'Messages'}"
+              >Todas</router-link>
+            <router-link
+              class="navbar-item"
+              :to="{name: 'Messages', params: {archived: 'archived'}}"
+              >Arquivadas </router-link>
+          </div>
+        </div>
 
         <router-link v-if="auth" class="navbar-item" @click="logout" to="/">
           <fa class="fa-2x" :icon="['fas', 'sign-out-alt']"></fa>

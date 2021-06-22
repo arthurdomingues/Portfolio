@@ -15,6 +15,12 @@
       </section>
       <footer class="modal-card-foot">
         <button @click="deleteMessage" class="button is-danger">Deletar</button>
+        <button
+          v-if="!archived"
+          @click="toArchive"
+          class="button is-warning">
+          Arquivar
+        </button>
       </footer>
       </div>
     </div>
@@ -42,7 +48,8 @@ export default {
     name: String,
     email: String,
     message: String,
-    sent: Date
+    sent: Date,
+    archived: Boolean,
   },
   methods:{
     close(){
@@ -67,7 +74,26 @@ export default {
           this.notification = err.response.data.err[0].msg
           this.$refs.error.show()
         })
+    },
+    toArchive(){
+      const req = {
+        headers:{
+          authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+      }
+      axios.put('http://localhost:8181/contact/' + this.id, {
+       archived: "true"
+      }, req).then( res => {
+        this.notification = res.data.message
+        this.active = ''
+        this.$refs.success.show()
+        this.$emit('refresh')
+      }).catch(err => {
+        this.notification = err.response.data.err
+        this.$refs.error.show()
+      })
     }
+
   }
 }
 </script>

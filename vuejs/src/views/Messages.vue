@@ -16,7 +16,8 @@
               message.name,
               message.email,
               message.message,
-              message.sent)">
+              message.sent,
+              message.archived)">
             Ver
           </button>
         </div>
@@ -35,7 +36,8 @@
   :name="name"
   :email="email"
   :message="message"
-  :sent="sent"/>
+  :sent="sent"
+  :archived="archived"/>
 
   <Notification ref="danger" class="is-danger" :message="notification"/>
   </section>
@@ -59,16 +61,21 @@ export default{
       name: '',
       email: '',
       message: '',
-      sent: ''
+      sent: undefined,
+      archived: undefined,
+      archivedRouteParam: ''
     }
   },
   created(){
+    if(this.$route.params.archived){
+      this.archivedRouteParam = '/' + this.$route.params.archived
+    }
     const req = {
       headers:{
         authorization: 'Bearer ' + localStorage.getItem('token')
       }
     }
-    axios.get('http://localhost:8181/contact', req)
+    axios.get('http://localhost:8181/contact' + this.archivedRouteParam, req)
       .then(res => {
         this.messages = res.data
       }) .catch(err => {
@@ -77,19 +84,19 @@ export default{
       })
   },
   methods:{
-    showModal(id, name, email, message, sent){
+    showModal(id, name, email, message, sent, archived){
       this.id = id
       this.name = name
       this.email = email
       this.message = message
       this.sent = sent
+      this.archived = archived
       this.$refs.showMessage.show()
     },
     reload(){
       setTimeout(()=>{this.$router.go()}, 3500)
     }
   }
-
 }
 </script>
 

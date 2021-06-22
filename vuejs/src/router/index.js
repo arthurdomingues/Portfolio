@@ -36,7 +36,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/admin/messages',
+    path: '/admin/messages/:archived?',
     name: 'Messages',
     component: Messages,
     beforeEnter: Auth
