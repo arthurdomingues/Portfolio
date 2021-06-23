@@ -15,8 +15,7 @@
                 <strong>
                   Olá, me chamo Arthur Silva Domingues!!
                 </strong>
-              </p>
-              <br/>
+              </p> <br/>
               <p class="has-text-left texto">
                 Nasci em Agosto de 1997 e sou natural de São Bernardo do Campo/SP.<br>
                 Meu primeiro contato com a programação foi com a linguagem C, onde tive

@@ -1,9 +1,9 @@
 <template>
   <div id="nav">
     <Navbar/>
-    <router-view v-slot="{ Component }" :key="$route.fullPath">
+    <router-view v-slot="{ Component }" >
       <transition name="slide">
-        <component :is="Component"></component>
+        <component :is="Component" :key="$route.fullPath"></component>
       </transition>
     </router-view>
   </div>

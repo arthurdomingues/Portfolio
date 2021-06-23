@@ -1,12 +1,10 @@
 <template>
 <section class="section">
+  <br>
   <div class="container">
-    <div class="columns">
      <div class="column has-text-centered">
-       <br>
        <h1 class="title">Skills</h1>
      </div>
-    </div>
 
     <div class="row columns is-multiline is-centered">
       <div v-for="card in dataCard" :key="card.id" class="column is-one-quarter">
