@@ -7,6 +7,7 @@ import Messages from '../views/Messages.vue'
 import Login from '../views/Login.vue'
 import Auth from './auth'
 import NotFound from '../views/404.vue'
+import Projects from '../views/Projects.vue'
 
 const routes = [
   { path: '/:pathMatch(.*)*', component: NotFound },
@@ -40,6 +41,11 @@ const routes = [
     name: 'Messages',
     component: Messages,
     beforeEnter: Auth
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: Projects
   }
 ]
 

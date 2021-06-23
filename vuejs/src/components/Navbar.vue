@@ -22,7 +22,7 @@
 
         <router-link class="navbar-item" to="/skills">Skills</router-link>
 
-        <a class="navbar-item" href=""> Projetos </a>
+        <router-link class="navbar-item" to="/projects">Projetos</router-link>
 
         <router-link class="navbar-item" to="/contact">Contato</router-link>
 
