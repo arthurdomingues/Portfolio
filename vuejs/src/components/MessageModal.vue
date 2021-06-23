@@ -9,7 +9,7 @@
       <section class="modal-card-body">
         <h1 class="has-text-left">Id: {{ id }}</h1>
         <h1 class="has-text-left">Nome: {{ name }}</h1>
-        <h1 class="has-text-left">Email: {{ email }}</h1><br>
+        <h1 class="has-text-left">Email: {{ email }}</h1>
         <h1 class="has-text-left">Enviado: {{ sent }}</h1><br>
         <h1>Mensagem: <br>{{ message }}</h1>
       </section>
@@ -48,7 +48,7 @@ export default {
     name: String,
     email: String,
     message: String,
-    sent: Date,
+    sent: String,
     archived: Boolean,
   },
   methods:{
@@ -98,6 +98,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.modal{
+  background-color: rgba(0, 0, 0, 0.7);
+}
 </style>

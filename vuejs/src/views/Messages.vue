@@ -78,6 +78,7 @@ export default{
     axios.get('http://localhost:8181/contact' + this.archivedRouteParam, req)
       .then(res => {
         this.messages = res.data
+        console.log(this.messages)
       }) .catch(err => {
         this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
@@ -101,4 +102,8 @@ export default{
 </script>
 
 <style scoped>
+.button{
+  margin: 1%;
+  width: 8%;
+}
 </style>
