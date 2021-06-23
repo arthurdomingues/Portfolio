@@ -144,10 +144,13 @@ export default {
   opacity: 1;
 }
 a{
-  color: inherit;
+  color: hsl(0, 0%, 29%);
   text-decoration: inherit;
 }
 a:hover{
-  color: black;
+  color: hsl(0, 0%, 12%);
+}
+h1{
+  color: hsl(0, 0%, 21%);
 }
 </style>
