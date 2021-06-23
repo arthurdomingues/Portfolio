@@ -90,12 +90,20 @@ export default{
       this.name = name
       this.email = email
       this.message = message
-      this.sent = sent
+      this.sent = this.dateCorretion(sent)
       this.archived = archived
       this.$refs.showMessage.show()
     },
     reload(){
       setTimeout(()=>{this.$router.go()}, 3500)
+    },
+    dateCorretion(date){
+      let correction = date.split('-')
+      const year = correction[0]
+      const month = correction[1]
+      const day = correction[2].split('T')[0]
+      const sent = `${day}-${month}-${year}`
+      return sent
     }
   }
 }
