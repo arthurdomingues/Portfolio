@@ -22,7 +22,7 @@ class AdminController {
       if (result) {
         const token = jwt.sign({
           name: user[0].name
-        }, secret, { expiresIn: 60 * 0.5 })
+        }, secret, { expiresIn: 60 * 60 })
         res.status(200).json({
           token: token,
           message: 'Login efetuado com sucesso'
