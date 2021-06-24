@@ -7,7 +7,7 @@ const secret = process.env.SECRET
 
 class AdminController {
   async logout (req, res) {
-    res.json({ message: 'Deslogado' })
+    res.status(200).json({ message: 'Deslogado' })
   }
 
   async validate (req, res) {
@@ -20,7 +20,9 @@ class AdminController {
     if (user !== undefined) {
       const result = await bcrypt.compare(password, user[0].password)
       if (result) {
-        const token = jwt.sign({ name: user[0].name }, secret)
+        const token = jwt.sign({
+          name: user[0].name
+        }, secret, { expiresIn: 60 * 0.5 })
         res.status(200).json({
           token: token,
           message: 'Login efetuado com sucesso'

@@ -79,7 +79,7 @@ export default{
       .then(res => {
         this.messages = res.data
         console.log(this.messages)
-      }) .catch(err => {
+      }).catch(err => {
         this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
       })

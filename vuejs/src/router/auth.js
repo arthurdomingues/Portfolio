@@ -12,9 +12,9 @@ export default function Auth(to, from, next){
       .then(res => {
         console.log(res)
         next()
-      })
-      .catch(err => {
+      }).catch(err => {
         console.log(err)
+        localStorage.removeItem('token')
         next('/login')
       })
   } else {

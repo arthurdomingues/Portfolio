@@ -69,17 +69,22 @@ export default{
   components:{
     Notification
   },
-  created: function(){
+  data(){
+    return{
+      message: undefined,
+      auth: false
+    }
+  },
+  watch(){
+    if(!localStorage.getItem('token')){
+      this.auth = false
+    }
+  },
+  created(){
     if(localStorage.getItem('token')){
       this.auth = true
     } else {
       this.auth = false
-    }
-  },
-  data(){
-    return{
-      auth: false,
-      message: undefined
     }
   },
   methods:{
@@ -87,8 +92,8 @@ export default{
       axios.get('http://localhost:8181/logout')
         .then(res => {
           this.message = res.data.message
-          this.$refs.success.show()
           localStorage.removeItem('token')
+          this.$refs.success.show()
           setTimeout(()=>{
             this.$router.go()
           }, 3500)

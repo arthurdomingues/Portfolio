@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <Navbar/>
+    <Navbar />
     <router-view v-slot="{ Component }" >
       <transition name="slide">
         <component :is="Component" :key="$route.fullPath"></component>
@@ -15,7 +15,7 @@ import Navbar from './components/Navbar.vue'
 export default{
   components: {
     Navbar,
-  }
+  },
 }
 </script>
 
@@ -36,7 +36,6 @@ body{
 .slide-leave-active{
   transition: opacity .3s, transform .3s;
 }
-
 .slide-enter,
 .slide-leave-to{
   opacity: 0;
