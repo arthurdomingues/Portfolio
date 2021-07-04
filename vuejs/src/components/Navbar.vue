@@ -1,7 +1,12 @@
 <template>
 <nav class="navbar is-dark is-fixed-top">
   <div class="navbar-brand">
-      <a class="navbar-item is-family-code has-text-weight-bold is-size-3">
+      <a class="
+        navbar-item
+        is-family-code
+        has-text-weight-bold
+        is-size-3
+        is-size-4-mobile">
         Arthur Domingues
       </a>
     <div class="navbar-burger" data-target="navbarExampleTransparentExample">
@@ -15,7 +20,7 @@
     <div class="navbar-start">
     </div>
 
-    <div class="navbar-end is-family-code has-text-weight-bold">
+    <div class="navbar-end is-family-code has-text-weight-bold" @click="close">
         <router-link class="navbar-item" to="/">Home</router-link>
 
         <router-link class="navbar-item" to="/about">Sobre Mim</router-link>
@@ -101,9 +106,9 @@ export default{
           console.log(err)
           this.$refs.danger.show()
         })
+    },
     }
   }
-}
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -121,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
 });
 </script>
 <style scoped>

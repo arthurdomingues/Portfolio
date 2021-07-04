@@ -9,40 +9,40 @@
   <div class="columns">
     <div class="column is-6 has-text-left is-family-code">
       <br>
-      <h1 class="has-text-weight-bold is-size-3">
+      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Email:
       </h1>
-      <a class="is-size-4" href="mailto:arthurdomingues76@gmail.com">
+      <a class="is-size-4 is-size-6-mobile" href="mailto:arthurdomingues76@gmail.com">
         <fa :icon="['fas', 'envelope']"></fa>
         arthurdomingues76@gmail.com
       </a>
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3">
+      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Github:
       </h1>
-      <a class="is-size-4" href="https://github.com/arthurdomingues/">
+      <a class="is-size-4 is-size-6-mobile" href="https://github.com/arthurdomingues/">
         <fa :icon="['fab', 'github']"></fa>
         arthurdomingues
       </a>
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3">
+      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Twitter:
       </h1>
-      <a class="is-size-4" href="https://twitter.com/ASilvaDomingues">
+      <a class="is-size-4 is-size-6-mobile" href="https://twitter.com/ASilvaDomingues">
         <fa :icon="['fab', 'twitter']"></fa>
         @ASilvaDomingues
       </a>
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3">
+      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Celular:
       </h1>
-      <h1 class="is-size-4">
+      <h1 class="is-size-4 is-size-6-mobile">
         <fa :icon="['fab', 'whatsapp']"></fa>
         <fa :icon="['fab', 'telegram']"></fa>
         (11)95814-0689
