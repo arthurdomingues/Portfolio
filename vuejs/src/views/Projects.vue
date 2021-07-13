@@ -22,7 +22,7 @@
             has-text-centered
             has-text-weight-bold">{{project.name}}</h1>
           <h3 class="is-size-5
-          has-text-justified
+          has-text-centered
           has-text-weight-medium">{{project.description}}</h3>
           <br>
           <ul id="list">
@@ -47,7 +47,7 @@ export default {
           link: 'https://github.com/arthurdomingues/Portfolio',
           description: ` Este site é uma simples apresentação minha e
           mostro as tecnologias que venho usando. Possui uma área de contato
-          que pode ser gerenciada pela área administrativa(não mostrada),
+          que pode ser gerenciada pela área administrativa (não mostrada),
           onde é possível arquivar e deletar as mensagens.`,
           image: 'site.jpg',
           technologies: [
