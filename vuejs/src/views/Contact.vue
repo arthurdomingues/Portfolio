@@ -12,7 +12,7 @@
       <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Email:
       </h1>
-      <a class="is-size-4 is-size-6-mobile" href="mailto:arthurdomingues76@gmail.com">
+      <a class="is-size-4" href="mailto:arthurdomingues76@gmail.com">
         <fa :icon="['fas', 'envelope']"></fa>
         arthurdomingues76@gmail.com
       </a>
@@ -22,7 +22,7 @@
       <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Github:
       </h1>
-      <a class="is-size-4 is-size-6-mobile" href="https://github.com/arthurdomingues/">
+      <a class="is-size-4" href="https://github.com/arthurdomingues/">
         <fa :icon="['fab', 'github']"></fa>
         arthurdomingues
       </a>
@@ -32,7 +32,7 @@
       <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Twitter:
       </h1>
-      <a class="is-size-4 is-size-6-mobile" href="https://twitter.com/ASilvaDomingues">
+      <a class="is-size-4" href="https://twitter.com/ASilvaDomingues">
         <fa :icon="['fab', 'twitter']"></fa>
         @ASilvaDomingues
       </a>
@@ -42,7 +42,7 @@
       <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Celular:
       </h1>
-      <h1 class="is-size-4 is-size-6-mobile">
+      <h1 class="is-size-4">
         <fa :icon="['fab', 'whatsapp']"></fa>
         <fa :icon="['fab', 'telegram']"></fa>
         (11)95814-0689
@@ -146,11 +146,24 @@ export default {
 a{
   color: hsl(0, 0%, 29%);
   text-decoration: inherit;
+  transition: all 200ms ease-in-out;
 }
 a:hover{
   color: hsl(0, 0%, 12%);
 }
 h1{
   color: hsl(0, 0%, 21%);
+}
+
+@media(max-width: 375px){
+  a {
+    font-size: 1.15rem !important;
+  } 
+}
+
+@media(max-width: 374px) and (min-width: 320px){
+  a {
+    font-size: 1rem !important;
+  } 
 }
 </style>
