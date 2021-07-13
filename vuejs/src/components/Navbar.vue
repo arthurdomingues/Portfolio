@@ -9,18 +9,24 @@
         is-size-4-mobile">
         Arthur Domingues
       </a>
-    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+    <div 
+      class="navbar-burger"
+      data-target="navbarBurger"
+      :class="burger"
+      @click="activeBurger" >
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
 
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
+  <div id="navbarBurger" class="navbar-menu" :class="burger">
     <div class="navbar-start">
     </div>
 
-    <div class="navbar-end is-family-code has-text-weight-bold" @click="close">
+    <div
+      class="navbar-end is-family-code has-text-weight-bold"
+      @click="activeBurger">
         <router-link class="navbar-item" to="/">Home</router-link>
 
         <router-link class="navbar-item" to="/about">Sobre Mim</router-link>
@@ -77,7 +83,8 @@ export default{
   data(){
     return{
       message: undefined,
-      auth: false
+      auth: false,
+      burger: undefined 
     }
   },
   watch(){
@@ -107,27 +114,15 @@ export default{
           this.$refs.danger.show()
         })
     },
+    activeBurger(){
+      if(this.burger === undefined){
+        this.burger = "is-active"
+      } else {
+        this.burger = undefined
+      }
+    }
     }
   }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const $navbarBurgers = Array
-    .prototype
-    .slice
-    .call(document.querySelectorAll('.navbar-burger'), 0);
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
-
-});
 </script>
 <style scoped>
 </style>
