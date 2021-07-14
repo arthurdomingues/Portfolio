@@ -86,6 +86,10 @@ export default {
 </script>
 
 <style scoped>
+p {
+  overflow:hidden;
+  padding: 3.5px;
+}
 .card-image{
   height: 150px;
 }
