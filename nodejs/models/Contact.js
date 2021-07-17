@@ -1,4 +1,5 @@
-const knex = require('../database/connection')
+const config = require('../knexfile')
+const knex = require('knex')(config)
 
 class Contact {
   async getMessage (id) {
