@@ -18,11 +18,21 @@ router.get(
   '/contact/:archived?',
   Admin, validate(archivedValidator),
   ContactController.index)
+
 router.get(
-  '/contact/:id', Admin, validate(idValidator), ContactController.getOne)
+  '/contact/:id',
+  Admin,
+  validate(idValidator),
+  ContactController.getOne)
+
 router.post('/contact', validate(sendValidator), ContactController.send)
+
 router.delete(
-  '/contact/:id', Admin, validate(idValidator), ContactController.delete)
+  '/contact/:id',
+  Admin,
+  validate(idValidator),
+  ContactController.delete)
+
 router.put('/contact/:id', Admin, validate(idValidator), ContactController.edit)
 
 router.post('/login', validate(loginValidator), AdminController.login)
