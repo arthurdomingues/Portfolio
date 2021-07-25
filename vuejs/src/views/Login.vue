@@ -94,7 +94,7 @@ export default{
 <style scoped>
 .card{
   margin: auto;
-  background: #1b242f;
+  background: url('~@/assets/images/background.png');
   box-shadow: none;
 }
 

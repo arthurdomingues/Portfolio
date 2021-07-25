@@ -173,11 +173,11 @@ export default{
 
 .navbar-dropdown, .navbar-dropdown .navbar-item:hover {
   color: #F4F9E9;
-  background: transparent;
+  background: #1b242f;
 }
 
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
-  background: transparent;
+  background: #1b242f;
 }
 </style>
