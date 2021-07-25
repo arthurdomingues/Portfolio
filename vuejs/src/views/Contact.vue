@@ -125,14 +125,14 @@ export default {
         this.notification = res.data.message
         this.$refs.success.show()
         this.$router.push('Contact')
+        this.name = ''
+        this.email = ''
+        this.message = ''
       }).catch(err => {
         this.notification = err.response.data.err[0].msg
         this.$refs.danger.show()
         this.$router.push('Contact')
       })
-      this.name = ''
-      this.email = ''
-      this.message = ''
     },
   }
 }
