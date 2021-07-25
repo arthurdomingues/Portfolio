@@ -25,7 +25,7 @@
     </div>
 
     <div
-      class="navbar-end is-family-code has-text-weight-bold"
+      class="navbar-end is-family-code has-text-weight-bold is-size-5"
       @click="activeBurger">
         <router-link class="navbar-item" to="/">Home</router-link>
 
@@ -140,7 +140,6 @@ export default{
 .navbar-item:hover {
   background: #1b242f;
   color: #08fdd8;
-  text-decoration-color: #08fdd8;
 }
 
 .navbar-item:focus {
