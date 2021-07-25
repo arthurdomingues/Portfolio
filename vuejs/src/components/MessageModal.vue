@@ -3,9 +3,9 @@
     <div class="modal" :class="active">
       <div class="modal-card">
         <header class="modal-card-head">
-        <p class="modal-card-title">Mensagem</p>
-        <button class="delete" aria-label="close" @click="close()"></button>
-      </header>
+          <p class="modal-card-title">Mensagem</p>
+          <button class="delete" aria-label="close" @click="close()"></button>
+        </header>
       <section class="modal-card-body">
         <h1 class="has-text-left">Id: {{ id }}</h1>
         <h1 class="has-text-left">Nome: {{ name }}</h1>
@@ -99,7 +99,15 @@ export default {
 </script>
 
 <style scoped>
+* {
+  color: #F4F9E9;
+}
+
 .modal{
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-card-head, .modal-card-body, .modal-card-foot {
+  background: #252934;
 }
 </style>

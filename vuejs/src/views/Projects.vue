@@ -12,18 +12,18 @@
               <img class="img" :src="require('@/assets/images/Projects/'+project.image)">
               <div class="overlay overlay--primary">
                 <fa class="fa-4x" :icon="['fab', 'github']"></fa>
-                <p>Ver no Github</p>
+                <span>Ver no Github</span>
               </div>
             </div>
           </a>
         </div>
         <div id="center" class="column is-6">
-          <h1 class="is-size-4
+          <h2 class="is-size-4
             has-text-centered
-            has-text-weight-bold">{{project.name}}</h1>
-          <h3 class="is-size-5
+            has-text-weight-bold">{{project.name}}</h2>
+          <p class="is-size-5
           has-text-centered
-          has-text-weight-medium">{{project.description}}</h3>
+          has-text-weight-medium">{{project.description}}</p>
           <br>
           <ul id="list">
             <li v-for="technology in project.technologies" :key="technology.name">
@@ -67,27 +67,40 @@ export default {
 h1{
   margin-bottom: 2%;
 }
+
 a{
-  color: white;
+  color: #F4F9E9;
 }
-p{
+
+span {
   font-size: 1.25em;
 }
-ul#list  li{
+
+ul#list  li {
+  color: #F4F9E9;
   display: inline;
   padding-left: 3%;
   font-weight: bold;
   list-style-type: circle;
 }
-#center{
+
+#center {
   margin: 1%;
 }
+
+.columns {
+  padding-bottom: 2%;
+  border-bottom: 3px solid #363636;
+}
+
 .image {
     position: relative;
 }
+
 .img {
     display: block;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -101,16 +114,20 @@ ul#list  li{
     opacity: 0;
     transition: opacity 0.25s;
 }
+
 .overlay--primary {
     background: rgba(0, 0, 0, 0.7);
 }
+
 .overlay > * {
     transform: translateY(20px);
     transition: transform 0.25s;
 }
+
 .overlay:hover {
     opacity: 1;
 }
+
 .overlay:hover > * {
     transform: translateY(0);
 }

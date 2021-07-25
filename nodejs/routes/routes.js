@@ -7,7 +7,7 @@ const AdminController = require('../controllers/AdminController')
 const {
   idValidator,
   sendValidator,
-  archivedValidator
+  archivedValidator,
 } = require('../middleware/validation/ContactValidator')
 const validate = require('../middleware/validation/Validator')
 const loginValidator = require('../middleware/validation/AdminValidator')
@@ -16,14 +16,17 @@ router.get('/', HomeController.index)
 
 router.get(
   '/contact/:archived?',
-  Admin, validate(archivedValidator),
-  ContactController.index)
+  Admin,
+  validate(archivedValidator),
+  ContactController.index
+)
 
 router.get(
   '/contact/:id',
   Admin,
   validate(idValidator),
-  ContactController.getOne)
+  ContactController.getOne
+)
 
 router.post('/contact', validate(sendValidator), ContactController.send)
 
@@ -31,7 +34,8 @@ router.delete(
   '/contact/:id',
   Admin,
   validate(idValidator),
-  ContactController.delete)
+  ContactController.delete
+)
 
 router.put('/contact/:id', Admin, validate(idValidator), ContactController.edit)
 

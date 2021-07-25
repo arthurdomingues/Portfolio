@@ -6,9 +6,12 @@
     <div v-for="message in messages" :key="message.id">
       <div class="card">
         <div class="card-header">
-          <p class="card-header-title">
-            Nome:{{message.name}}<br> Email:{{message.email}}
-          </p>
+          <span class="card-header-title">
+            Nome: {{message.name}} 
+          </span>
+          <span class="card-header-title">
+            Email: {{message.email}}
+          </span>
           <button
             class="button is-primary"
             @click="showModal(
@@ -26,7 +29,6 @@
           {{message.message}}
         </div>
       </div>
-      <hr>
     </div>
   </div>
 
@@ -110,8 +112,22 @@ export default{
 </script>
 
 <style scoped>
+* {
+  color: #F4F9E9;
+}
+
+.card-header-title {
+  display: flex;
+}
+
 .button{
   margin: 1%;
   width: 8%;
 }
+
+.card {
+  margin-bottom: 3%;
+  background: #252934;
+}
+
 </style>

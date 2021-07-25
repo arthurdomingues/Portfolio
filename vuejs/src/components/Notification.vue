@@ -37,6 +37,7 @@ export default {
   top: 70px;
   right: 2px;
 }
+
 .notification{
   position: fixed;
   z-index: 10000;
@@ -44,6 +45,17 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+@media(max-width: 500px){
+  .notification{
+    position: fixed;
+    z-index: 10000;
+    width: 270px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .slide-fade-enter-active {
   transition: all 0.2s ease-out;
 }

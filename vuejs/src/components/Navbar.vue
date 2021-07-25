@@ -1,14 +1,14 @@
 <template>
-<nav class="navbar is-dark is-fixed-top">
+<nav class="navbar is-fixed-top">
   <div class="navbar-brand">
-      <a class="
+      <span id="name" class="
         navbar-item
         is-family-code
         has-text-weight-bold
         is-size-3
         is-size-4-mobile">
         Arthur Domingues
-      </a>
+      </span>
     <div 
       class="navbar-burger"
       data-target="navbarBurger"
@@ -125,4 +125,44 @@ export default{
   }
 </script>
 <style scoped>
+.navbar, .navbar-menu {
+  background: #1b242f;
+}
+
+.navbar-item {
+  color: #F4F9E9;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  text-underline-position: under;
+  transition: text-decoration-color 300ms, color 300ms;
+}
+
+.navbar-item:hover {
+  background: #1b242f;
+  color: #08fdd8;
+  text-decoration-color: #08fdd8;
+}
+
+.navbar-item:focus {
+  background: #1b242f;
+  color: #08fdd8;
+  text-decoration: underline;
+  text-decoration-color: #08fdd8;
+  text-underline-position: under;
+}
+
+#name {
+  color: #F4F9E9;
+  text-decoration: none;
+}
+
+.navbar-dropdown, .navbar-dropdown .navbar-item:hover {
+  color: #F4F9E9;
+  background: #1b242f;
+}
+
+.navbar-item.has-dropdown:hover .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link {
+  background: #1b242f;
+}
 </style>

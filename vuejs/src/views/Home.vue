@@ -22,7 +22,7 @@
           <button class="button
             is-rounded
             is-large
-            is-info
+            is-primary
             is-outlined"
             @click="redirect">
             Projetos</button>
@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .section1{
-  background: #363636;
+  background: #1b242f;
 }
 .h11{
   color:white;

@@ -9,9 +9,9 @@
   <div class="columns">
     <div class="column is-6 has-text-left is-family-code">
       <br>
-      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
+      <h2 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Email:
-      </h1>
+      </h2>
       <a class="is-size-4" href="mailto:arthurdomingues76@gmail.com">
         <fa :icon="['fas', 'envelope']"></fa>
         arthurdomingues76@gmail.com
@@ -19,9 +19,9 @@
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
+      <h2 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Github:
-      </h1>
+      </h2>
       <a class="is-size-4" href="https://github.com/arthurdomingues/">
         <fa :icon="['fab', 'github']"></fa>
         arthurdomingues
@@ -29,9 +29,9 @@
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
+      <h2 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Twitter:
-      </h1>
+      </h2>
       <a class="is-size-4" href="https://twitter.com/ASilvaDomingues">
         <fa :icon="['fab', 'twitter']"></fa>
         @ASilvaDomingues
@@ -39,14 +39,14 @@
       <br>
       <br>
 
-      <h1 class="has-text-weight-bold is-size-3 is-size-4-mobile">
+      <h2 class="has-text-weight-bold is-size-3 is-size-4-mobile">
         Celular:
-      </h1>
-      <h1 class="is-size-4">
+      </h2>
+      <h2 class="is-size-4">
         <fa :icon="['fab', 'whatsapp']"></fa>
         <fa :icon="['fab', 'telegram']"></fa>
         (11)95814-0689
-      </h1>
+      </h2>
       <br>
       <br>
     </div>
@@ -85,7 +85,7 @@
         </div>
       </div>
 
-      <button class="button is-dark is-outlined is-medium" @click="send">
+      <button class="button is-primary is-outlined is-medium" @click="send">
         Enviar
       </button>
 
@@ -139,20 +139,27 @@ export default {
 </script>
 
 <style scoped>
+.input {
+  color: #F4F9E9;
+  background: #252934;
+  border: none;
+}
+
 ::placeholder{
   color:gray;
-  opacity: 1;
+  opacity: 0.5;
 }
+
 a{
-  color: hsl(0, 0%, 29%);
-  text-decoration: inherit;
-  transition: all 200ms ease-in-out;
+  color:#F4F9E9;
+  transition: all 300ms ease-in-out;
 }
+
 a:hover{
-  color: hsl(0, 0%, 12%);
+  color: #08fdd8;
 }
-h1{
-  color: hsl(0, 0%, 21%);
+h1, h2{
+  color: #F4F9E9;
 }
 
 @media(max-width: 375px){

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="app">
     <Navbar />
     <router-view v-slot="{ Component }" >
       <transition name="slide">
@@ -20,17 +20,23 @@ export default{
 </script>
 
 <style>
+* {
+  color:#F4F9E9;
+}
+
+.section .title {
+  color:#F4F9E9;
+}
+
 body{
   margin: 0;
   padding: 0;
   background: #f3f3f3;
 }
 #app{
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
   text-align: center;
-  color: #2c3e50;
+  background-color: #1b242f;
 }
 .slide-enter-active,
 .slide-leave-active{
@@ -40,5 +46,9 @@ body{
 .slide-leave-to{
   opacity: 0;
   transform: translateZ(-30%);
+}
+
+section {
+  background: #1b242f;
 }
 </style>

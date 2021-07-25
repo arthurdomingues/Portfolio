@@ -6,9 +6,9 @@
           <div class="column is-half is-offset-one-quarter">
             <div class="card">
 
-              <p class="card-header-title is-size-3">
+              <span class="card-header-title is-size-3">
                   Login
-              </p>
+              </span>
 
               <div class="card-content">
                 <div class="field">
@@ -94,8 +94,21 @@ export default{
 <style scoped>
 .card{
   margin: auto;
+  background: #1b242f;
+  box-shadow: none;
 }
-.color{
-  background: #363636;
+
+.input {
+  color: #F4F9E9;
+  background: #252934;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 0.5;
+}
+
+span {
+  color: #F4F9E9;
 }
 </style>

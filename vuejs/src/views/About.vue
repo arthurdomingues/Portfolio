@@ -8,14 +8,14 @@
           <br>
           <div class="columns is-multiline">
               <div class="column is-6 right-image">
-                <img id="eu" src="../assets/images/eu.jpg" width="300" height="400"/>
+                <img id="eu" src="../assets/images/eu.png"/>
               </div>
             <div class="column is-6 has-vertically-aligned-content">
-              <p class="is-larger is-size-4 has-text-left">
+              <h2 class="is-larger is-size-4 has-text-left">
                 <strong>
                   Olá, me chamo Arthur Silva Domingues!!
                 </strong>
-              </p> <br/>
+              </h2> <br/>
               <p class="has-text-left texto">
                 Nasci em Agosto de 1997 e sou natural de São Bernardo do Campo/SP.<br>
                 Meu primeiro contato com a programação foi com a linguagem C, onde tive
@@ -47,9 +47,20 @@ export default {
 
 <style scoped>
 #eu{
-    border-radius: 5px;
+    border-radius: 100%;
+    height: 399px;
 }
 .texto{
   font-size: 17px;
+}
+
+strong {
+  color: #F4F9E9;
+}
+
+@media (max-width: 500px){
+  #eu {
+    height: 70%;
+  }
 }
 </style>
