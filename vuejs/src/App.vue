@@ -36,7 +36,7 @@ body{
 #app{
   height: 100vh;
   text-align: center;
-  background-color: #1b242f;
+  background: url('~@/assets/images/background.png');
 }
 .slide-enter-active,
 .slide-leave-active{
