@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .top-right{
   top: 70px;
-  right: 2px;
+  right: 10px;
 }
 
 .notification{
