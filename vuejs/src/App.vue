@@ -49,6 +49,6 @@ body{
 }
 
 section {
-  background: #1b242f;
+  background: url('~@/assets/images/background.png');
 }
 </style>

@@ -125,8 +125,24 @@ export default{
   }
 </script>
 <style scoped>
-.navbar, .navbar-menu {
-  background: #1b242f;
+.navbar {
+  background: url('~@/assets/images/background.png');
+}
+
+@media screen and (max-width:1023px){
+  .navbar-menu{
+    height: 100vh;
+    width: 100%;
+    background: url('~@/assets/images/background.png');
+  }
+  .navbar-menu.is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .is-size-5{
+    font-size: 2.0rem !important;
+  }
 }
 
 .navbar-item {
@@ -138,12 +154,12 @@ export default{
 }
 
 .navbar-item:hover {
-  background: #1b242f;
+  background: transparent;
   color: #08fdd8;
 }
 
 .navbar-item:focus {
-  background: #1b242f;
+  background: transparent;
   color: #08fdd8;
   text-decoration: underline;
   text-decoration-color: #08fdd8;
@@ -157,11 +173,11 @@ export default{
 
 .navbar-dropdown, .navbar-dropdown .navbar-item:hover {
   color: #F4F9E9;
-  background: #1b242f;
+  background: transparent;
 }
 
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
-  background: #1b242f;
+  background: transparent;
 }
 </style>

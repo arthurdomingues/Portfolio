@@ -45,9 +45,9 @@ export default {
 
 <style scoped>
 .section1{
-  background: #1b242f;
+  background: transparent;
 }
-.h11{
+.h11 {
   color:white;
 }
 </style>

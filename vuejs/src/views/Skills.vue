@@ -111,7 +111,7 @@ hr {
 
 .card{
   border-radius: 10px;
-  background: #1b242f;
+  background: transparent;
   box-shadow: none;
 }
 

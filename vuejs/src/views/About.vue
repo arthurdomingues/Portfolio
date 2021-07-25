@@ -8,7 +8,7 @@
           <br>
           <div class="columns is-multiline">
               <div class="column is-6 right-image">
-                <img id="eu" src="../assets/images/eu.png"/>
+                <img id="eu" :src="require('@/assets/images/eu.png')"/>
               </div>
             <div class="column is-6 has-vertically-aligned-content">
               <h2 class="is-larger is-size-4 has-text-left">
